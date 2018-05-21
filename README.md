@@ -1,27 +1,27 @@
-##Library for 4-digit display with TM1637 written in C for NXP Kinetis microcontroller
+## Library for 4-digit display with TM1637 written in C for NXP Kinetis microcontroller
 
 Developed on FRDM-KL02z, change `#include "MKL02Z4.h"` according to your microcontroller  
 Default pins PTB8 as Clock and PTB9 as Data both are set as GPIO so you need to initialize the pins before  
 Change `PORT`, `CLK` and `DIO` definitions according to your needs 
 
-##Functions
+## Functions
 
-###`tm1637_init()`
+### `tm1637_init()`
 Turn OFF the display and clears all digits
  
-###`start()`  
+### `start()`  
 Start data transfer 
 
-###`stop()`
+### `stop()`
 Stop data transfer
 
-###`writeData(unsigned char data)`
+### `writeData(unsigned char data)`
 Write 8 bits data to `DIO` with `CLK` handling, you need to use `start()` function before and `stop()` after.
 
-###`write_4digits(unsigned char* tab)`
+### `write_4digits(unsigned char* tab)`
 With this function you can write data to the whole screen 
 
-##Example
+## Example
 
 `tm1637_init();`  
 
